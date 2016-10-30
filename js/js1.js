@@ -142,6 +142,7 @@ domReady(function(){
 				home_d1.style.animation='run 0.5s forwards linear';
 				home_d2.style.animation='run2 0.5s forwards linear';
 				home_d3.style.animation='run 0.5s forwards linear';
+				skillUl.style.transform='translateY('+(-(winH/2+200))+'px)';
 				break;
 			case 1:
 			
@@ -158,6 +159,7 @@ domReady(function(){
 				break;
 			default:
 				dong('.contact');
+				skillUl.style.transform='translateY('+(winH+400)+'px)';
 				break;
 		}
 	},false);
@@ -176,6 +178,14 @@ domReady(function(){
 			origin=oClouds.style.left=this.offsetLeft;
 			bOk=false;
 			conH=this.index;
+			if(conH==1){
+				sanD();
+			}else{
+				for(var i=0;i<effect_Li.length;i++){
+					effect_Li[i].style.transition='1s all ease';
+					effect_Li[i].style.transform='rotateY(0) translateZ(0)';
+				}
+			}
 			oMain_page.style.transform ='transLateY('+-conH*winH+'px)';
 		}
 		
